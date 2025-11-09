@@ -1,0 +1,8 @@
+# Code: basic EDA
+df.info()
+df.describe(include='all').T
+df['tsunami'].value_counts(dropna=False)
+
+# missing values
+df.isna().sum()
+
