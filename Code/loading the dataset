@@ -1,0 +1,16 @@
+from google.colab import files
+
+# Step 1: Upload kaggle.json (downloaded from Kaggle account)
+# A file chooser will open; select your kaggle.json file
+uploaded = files.upload()
+
+# Step 6: Load dataset into pandas DataFrame
+import pandas as pd
+
+# Adjust file name based on what was extracted
+df = pd.read_csv("global-earthquake-tsunami-risk-assessment-dataset.zip")
+
+# Preview the first 5 rows
+df.head()
+df.shape
+
