@@ -1,0 +1,18 @@
+# Drop irrelevant columns if any
+df = df.drop(columns=['id', 'location'], errors='ignore')
+
+#Standardize column names
+df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_')
+
+
+
+# Convert tsunami to binary if needed
+if df['tsunami'].dtype == 'object':
+    # assumes values like 'Yes'/'No' or '1'/'0'
+    df['tsunami'] = df['tsunami'].map({'Yes':1, 'No':0}).astype(int)
+
+
+#  Drop obviously useless columns (id, url etc) if present
+for drop_col in ['id', 'source', 'url']:
+    if drop_col in df.columns:
+        df.drop(columns=[drop_col], inplace=True)
