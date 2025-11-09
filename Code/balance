@@ -1,0 +1,5 @@
+# visual: class imbalance
+plt.figure(figsize=(6,4))
+sns.countplot(x='tsunami', data=df)
+plt.title('Tsunami class balance')
+plt.show()
