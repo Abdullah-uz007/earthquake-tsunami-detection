@@ -1,0 +1,5 @@
+num_cols = df.select_dtypes(include=['int64','float64']).columns.tolist()
+plt.figure(figsize=(10,8))
+sns.heatmap(df[num_cols].corr(), annot=False, cmap='coolwarm')
+plt.title('Numerical feature correlations')
+plt.show()
