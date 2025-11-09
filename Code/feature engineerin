@@ -1,0 +1,5 @@
+if 'mag' in df.columns:
+    df['mag_bucket'] = pd.cut(df['mag'], bins=[-1,2,4,6,8,10], labels=['micro','minor','light','strong','major'])
+
+if 'depth' in df.columns:
+    df['shallow'] = (df['depth'] < 70).astype(int)  # example: shallow vs deep
