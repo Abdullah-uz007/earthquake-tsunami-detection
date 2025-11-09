@@ -41,8 +41,7 @@ ml-learning-earthquake-tsunami-detection/
 - TensorFlow / Keras  
 - joblib  
 
-```bash
-pip install -r requirements.txt
+
 📈 Model & Results
 
 Model Used: Simple Feedforward Neural Network
