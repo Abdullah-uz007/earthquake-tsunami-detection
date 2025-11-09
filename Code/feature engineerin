@@ -3,3 +3,10 @@ if 'mag' in df.columns:
 
 if 'depth' in df.columns:
     df['shallow'] = (df['depth'] < 70).astype(int)  # example: shallow vs deep
+# Code: define features and target
+target = 'tsunami'
+X = df.drop(columns=[target])
+y = df[target]
+
+# quick check
+X.shape, y.shape, y.value_counts(normalize=True)
